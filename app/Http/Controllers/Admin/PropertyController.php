@@ -73,4 +73,5 @@ class PropertyController extends Controller
         return $property;
         // return view('admin.property.update_property',compact("property"));
     }
+
 }

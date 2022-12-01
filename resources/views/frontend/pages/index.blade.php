@@ -478,12 +478,12 @@
               <div class="col-md-4 col-sm-6 col-xs-6">
                   <div class="apartments-content">
                       <div class="image-content">
-                         <a href="apartment-single.html"><img src="{{$property->image}}" alt="apartment" style="height: 300px;width:300px;" /></a>
+                         <a href="{{url('property_single',$property->id)}}"><img src="{{$property->image}}" alt="apartment" style="height: 300px;width:300px;" /></a>
                       </div><!-- /.image-content -->
                  
                       <div class="text-content">
                           <div class="top-content">
-                             <h3><a href="apartment-single.html">{{$property->title}}</a></h3>
+                             <h3><a href="{{url('property_single',$property->id)}}">{{$property->title}}</a></h3>
                              <span>
                                  <i class="fa fa-map-marker"></i>
                                  {{$property->address}}

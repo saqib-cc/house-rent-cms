@@ -59,4 +59,4 @@ $properties = App\Property::all();
     ================================================== --> 
     <script src="{{asset('frontend/assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
     <script src="{{asset('frontend/assets/js/plugins.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/main.js')}}"></script
+    <script src="{{asset('frontend/assets/js/main.js')}}"></script>

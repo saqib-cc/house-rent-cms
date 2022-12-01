@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/','Frontend\FrontendController@index');
+Route::get('property_single/{id}','Frontend\FrontendController@property_single')->name('property_single');
+Route::post('add_booking','Frontend\BookingController@add_booking')->name('add_booking');
 
 Route::get('login', function () {
     return view('login');
@@ -63,7 +65,7 @@ Route::group(['middleware' => ['auth']], function () {
     //  Properties routes
     // Route::get('view_addproperty/','Admin\PropertyController@view_addproperty')->name('view_addproperty');
     Route::get('properties','Admin\PropertyController@properties')->name('properties');
-    // Route::get('edit_property/','Admin\PropertyController@edit_property')->name('edit_property');
+    // Route::get('property_single/','Admin\PropertyController@property_single')->name('property_single');
 
 
 
