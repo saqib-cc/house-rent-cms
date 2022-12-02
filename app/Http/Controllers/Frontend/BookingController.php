@@ -6,11 +6,12 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Booking;
 use App\Property;
+use  App\Jobs\Booking_email_job;
 class BookingController extends Controller
 {
     //
     public function add_booking(Request $request){
-        // $request->validate([
+        // $validate =  $request->validate([
         //       'fullname'=>'required',
         //       'phone'=>'required',
         //       'email'=>'required',
@@ -27,6 +28,8 @@ class BookingController extends Controller
         $booking->children =$request->children; 
         $booking->message =$request->message;
         $property->booking()->save($booking);
-        // return redirect('property_single')->with('status','Booinkg Added!');
+        $data['email'] ='saqibrehman139@gmail.com';
+        dispatch(new Booking_email_job($data));
+        return redirect('property_single/'.$request->property_id)->with('status','Booinkg Added!');
     }
 }

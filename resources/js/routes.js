@@ -3,6 +3,8 @@ import  add_property  from "./components/add_property.vue"
 import  update_property  from "./components/update_property.vue"
 import  properties  from "./components/properties.vue"
 import  app  from "./components/app.vue"    
+import  bookings  from "./components/bookings.vue"   
+ 
 const routes = [
     {
         name: "add_property",
@@ -18,6 +20,10 @@ const routes = [
         name: "properties",
         path: "/properties",
         component: properties
+    }, {
+        name: "bookings",
+        path: "/bookings",
+        component: bookings
     }
 ]
 const router = new VueRouter({

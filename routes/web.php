@@ -63,9 +63,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('update_setting/{id}','Admin\SettingController@update_setting')->name('update_setting');
     Route::get('edit_setting/','Admin\SettingController@edit_setting')->name('edit_setting');
     //  Properties routes
-    // Route::get('view_addproperty/','Admin\PropertyController@view_addproperty')->name('view_addproperty');
     Route::get('properties','Admin\PropertyController@properties')->name('properties');
-    // Route::get('property_single/','Admin\PropertyController@property_single')->name('property_single');
+     //  Booking routes
+     Route::get('bookings','Admin\BookingController@bookings')->name('bookings');
+    //  Route::get('show_bookings','Admin\BookingController@bookings')->name('show_bookings');
+
 
 
 

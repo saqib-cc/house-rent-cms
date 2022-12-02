@@ -12,6 +12,7 @@ Vue.component('add_property', require('./components/add_property').default);
 Vue.component('properties', require('./components/properties').default);
 Vue.component('update_property/', require('./components/update_property').default);
 Vue.component('app', require('./components/app').default);
+Vue.component('bookings', require('./components/bookings').default);
 
 
  Vue.use(VueRouter)
